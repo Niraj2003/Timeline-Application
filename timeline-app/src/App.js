@@ -5,7 +5,7 @@ import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import AddTimelinePage from './components/AddTimelinePage';
 import TimelineList from './components/TimelineList';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Ensure Bootstrap CSS is imported
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header';
 
 

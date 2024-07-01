@@ -1,16 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv')
 const cookieParser = require('cookie-parser');
 const authRoutes = require('./routes/auth');
 const timelineRoutes = require('./routes/timeline');
 
 const app = express();
+dotenv.config();
 app.use(express.json());
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
 app.use(cookieParser());
 
-mongoose.connect('mongodb://localhost:27017/timeline-app', {
+mongoose.connect(process.env.database, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
